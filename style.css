@@ -15,18 +15,38 @@
 
 .cardapio{
     display: grid;
-    /* 3 colunas iguais e centralizadas na tela */
-    grid-template-columns: repeat(3, minmax(500px, 200px));
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     margin: 32px auto;
     text-align: center;
+    width: 100%;
+}
 
 .icones-cardapio {
-    font-size: 1rem;
-    color: #333;
+    color: #3b3b3b;
     text-transform: capitalize;
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;    
+    gap: 8px; 
+    justify-content: center;
+    padding: 8px 16px;      
+    height: 100%;
 } 
 
+        .icones-cardapio:not(:last-child){
+            border-right: solid 2px black;
+        }
+
+.icones-cardapio img {
+    width: 24px;             
+    height: 24px;            
+    object-fit: contain;  
+}
+
+.icones-cardapio:hover{
+    text-shadow: 2px 3px 3px rgba(76, 76, 76, 0.521);
+    
+}
