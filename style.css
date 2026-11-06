@@ -3,7 +3,53 @@
     padding: 0px;
 }
 
-/* Toda essa parte trata do carrossel e da barrinha onde tá escrito "bebidas */
+/* Esse trecho trata do header */
+#cabecalho{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+#logo{
+    display: flex;
+    text-align: center;
+}
+
+.logo-icon{
+    width: 100px;
+    height: 100px;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+
+h1{
+    color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+strong{
+    font-weight: 800;
+    font-size: 60px;
+    color: rgb(246, 166, 18);
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 10px;
+}
+nav, a, img{
+    width: 90px;
+}
+
+/* Toda essa parte trata do carrossel e da barrinha onde tá escrito "bebidas" e etc. */
 
 #carouselExample{
     max-width: 100%;
@@ -51,7 +97,7 @@
 .icones-cardapio:hover{
     /* text-shadow: ; */
 
-    /* Esse é o css dos Cards. Tomei cuidado, talvez existam classes e IDs com o mesmo nome e isso pode zuar o CSS */
+  
         
     /* Aqui começa o footer que foi feito pelo arthur kkkkkk*/
 }
@@ -67,28 +113,7 @@ footer {
 }
 
 
-@media (max-width: 600px) {
-    .cabecalho-conteudo {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .cabecalho-texto {
-        text-align: center;
-    }
-
-    .subtitulo {
-        justify-content: center;
-    }
-
-    #image_da_logo {
-        width: 80px;
-    }
-    
-    .cursor-follower {
-        display: none;
-    }
-}
+/*  */
 
 .footer {
     background: #101010;
