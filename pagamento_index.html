@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="pagamento_style.css">
+    <script src="pagamento_script.js" defer></script>
+</head>
+<body>
+    <main class="formulario">
+        <h1 class="cab">Pagamento</h1>
+
+        <div class="corpo">
+            <form id="form">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input
+                        id="nome"
+                        name="nome"
+                        type="text"
+                        autocomplete="name"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone:</label>
+                    <input
+                        id="telefone"
+                        name="telefone"
+                        type="tel"
+                        inputmode="numeric"
+                        autocomplete="tel-national"
+                        placeholder="Ex.: 21-96408-4028"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="endereco">Endereço:</label>
+                    <input
+                        id="endereco"
+                        name="endereco"
+                        type="text"
+                        placeholder="Ex.: Rua São João"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="numero">Número:</label>
+                    <input
+                        id="numero"
+                        name="numero"
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="Ex.: 123"
+                        required
+                    >
+                </div>
+
+                <fieldset class="pagamento">
+                    <legend>Método de pagamento:</legend>
+
+                    <div class="grupo-opcoes">
+                        <div class="opcao">
+                            <input id="pix" name="pagamento" type="radio" value="pix" required>
+                            <label for="pix">Pix</label>
+                        </div>
+
+                        <div class="opcao">
+                            <input id="credito" name="pagamento" type="radio" value="credito">
+                            <label for="credito">Crédito</label>
+                        </div>
+
+                        <div class="opcao">
+                            <input id="debito" name="pagamento" type="radio" value="debito">
+                            <label for="debito">Débito</label>
+                        </div>
+
+                        <div class="opcao">
+                            <input id="dinheiro" name="pagamento" type="radio" value="dinheiro">
+                            <label for="dinheiro">Dinheiro</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

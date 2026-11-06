@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #737783;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cab {
+    padding: 16px;
+    border-radius: 12px 12px 0 0;
+    background-color: #1e293b;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.corpo {
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.campo label,
+.pagamento legend {
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #1e293b;
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.campo input:focus {
+    border-color: #3b82f6;
+    outline: 2px solid #bfdbfe;
+    outline-offset: 1px;
+}
+
+.pagamento {
+    min-width: 0;
+    margin-bottom: 12px;
+    padding: 8px 12px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #f8fafc;
+}
+
+.pagamento legend {
+    padding: 0 4px;
+}
+
+.grupo-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.opcao input {
+    width: 16px;
+    height: 16px;
+    accent-color: #3b82f6;
+    cursor: pointer;
+}
+
+.opcao label {
+    color: #475569;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 11px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus-visible {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
