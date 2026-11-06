@@ -15,7 +15,7 @@
     object-fit: cover;
 }
 
-.cardapio{
+.cardapio1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -50,6 +50,8 @@
 
 .icones-cardapio:hover{
     /* text-shadow: ; */
+
+    /* Esse é o css dos Cards. Tomei cuidado, talvez existam classes e IDs com o mesmo nome e isso pode zuar o CSS */
         
     /* Aqui começa o footer que foi feito pelo arthur kkkkkk*/
 }
