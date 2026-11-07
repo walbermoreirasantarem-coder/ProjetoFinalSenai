@@ -101,3 +101,4 @@ formulario.addEventListener("submit", function (evento) {
 
     alert("Formulário validado com sucesso!");
 });
+

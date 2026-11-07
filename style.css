@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth !important;
+}
 
 body {
     display: flex;
@@ -18,7 +21,16 @@ body {
    CABEÇALHO
 ========================= */
 
+#carouselExample,
+#secao-cardapio,
+#secao-contato {
+    scroll-margin-top: 110px;
+}
+
 #cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -385,8 +397,9 @@ nav a:hover::after {
 }
 
 #carouselExample .carousel-item img {
-    height: 400px;
+    height: 600px;
     object-fit: cover;
+    object-position: center;
 }
 
 .cardapio1 {
