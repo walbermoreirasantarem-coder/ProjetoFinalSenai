@@ -1,32 +1,33 @@
 /* ========================================================
-   SCROLL SUAVE GLOBAL PARA ÂNCORAS DO MENU
+   NAVEGAÇÃO SUAVE DOS LINKS DO CABEÇALHO (Scroll Smooth)
 ======================================================== */
-document.addEventListener('click', function (e) {
-  // Procura se o clique veio de algum link do nav
-  const link = e.target.closest('nav a');
+(() => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const header = document.getElementById('cabecalho');
 
-  if (!link) return;
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
 
-  const href = link.getAttribute('href');
+        // Ignora links vazios ou apenas "#"
+        if (!targetId || targetId === '#') return;
 
-  // Só intercepta se começar com # e tiver mais de 1 caractere (ex: #secao-cardapio)
-  if (href && href.startsWith('#') && href.length > 1) {
-    const alvo = document.querySelector(href);
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
 
-    if (alvo) {
-      e.preventDefault(); // Trava o salto seco nativo
+          // Calcula a altura dinâmica do cabeçalho fixo
+          const headerOffset = header ? header.offsetHeight : 0;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-      // Descobre a altura do cabeçalho
-      const header = document.getElementById('cabecalho');
-      const alturaHeader = header ? header.offsetHeight : 0;
-
-      // Posição calculada com precisão
-      const topoAlvo = alvo.getBoundingClientRect().top + window.pageYOffset - alturaHeader;
-
-      window.scrollTo({
-        top: topoAlvo,
-        behavior: 'smooth'
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
-    }
-  }
-});
+    });
+  });
+})();

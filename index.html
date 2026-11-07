@@ -97,7 +97,7 @@
 
         <!-- ================================== Barra de navegação da Main ========================================================= -->
 
-        <div class="cardapio1">
+        <div class="cardapio1" id="secao-cardapio">
             <div class="icones-cardapio">
                 <img src="Imagens/prato.png" alt="">
                 <span>Pratos</span>
@@ -117,7 +117,7 @@
         </div>
 
         <!-- ================================== Cardápio Pratos========================================================= -->
-         <div class="grid" id="secao-cardapio">
+         <div class="grid">
 
                 
                   <section class="card">
@@ -284,32 +284,7 @@
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
 </script>
 
-<!-- <script src="script.js"></script> -->
-<script>
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('nav a');
-    if (!link) return;
-
-    const href = link.getAttribute('href');
-
-    if (href && href.startsWith('#') && href.length > 1) {
-      const alvo = document.querySelector(href);
-
-      if (alvo) {
-        e.preventDefault();
-
-        const header = document.getElementById('cabecalho');
-        const alturaHeader = header ? header.offsetHeight : 0;
-        const topoAlvo = alvo.getBoundingClientRect().top + window.pageYOffset - alturaHeader;
-
-        window.scrollTo({
-          top: topoAlvo,
-          behavior: 'smooth'
-        });
-      }
-    }
-  });
-</script>
+<script src="script.js"></script>
 </body>
 
 
